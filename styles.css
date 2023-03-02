@@ -10,7 +10,37 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f7f7f7;
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: fixed;
+    align-content: stretch;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+audio
+{
+    position: relative;
+    width: 100%;
+    height: 32px;
+    z-index: 1;
+}
+
+.page {
+    display: flex;
     flex-direction: row;
+    top: 0;
+    left: 0;
+    height: calc(100vh - 32px);
+    z-index: 10;
+}
+
+.musicbox{
+    top: 0;
+    left: 0;
+    z-index: 10;
 }
 
 /* Header styles */
@@ -23,6 +53,15 @@ header {
     color: #fff;
 }
 
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+}
+
 .sidebar{
     position: relative;
     display: flex;
@@ -33,7 +72,6 @@ header {
     padding: 1rem;
     color: #fff;
     width: 20vw;
-    height: 100vh;
     top: 0;
     left: 0;
     z-index: 10;
@@ -45,12 +83,18 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    background-color: #f7f7f7;
+    justify-content: center;
     padding: 1rem;
     color: #333;
-    height: 100vh;
     z-index: 1;
+}
+
+.content-block{
+    margin: 1%;
+    border: dashed 8px;
+    border-radius: 5px;
+    padding: 1%;
+    background-color: #fff;
 }
 
 /* Logo styles */
