@@ -60,6 +60,7 @@ header {
     width: 100vw;
     height: 100vh;
     z-index: 0;
+    filter: blur(5px);
 }
 
 .sidebar{
@@ -68,7 +69,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 1rem;
     color: #fff;
     width: 20vw;
@@ -81,20 +82,21 @@ header {
 .main-content{
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    color: #333;
+    color: #fff;
     z-index: 1;
+    overflow: auto;
 }
 
 .content-block{
     margin: 1%;
-    border: dashed 8px;
     border-radius: 5px;
-    padding: 1%;
-    background-color: #fff;
+    padding: 2%;
+    background-color: #333;
 }
 
 /* Logo styles */
@@ -111,6 +113,7 @@ header {
     margin-bottom: 24px;
     transform: translateX(-50%);
     border-radius: 100%;
+    box-shadow: black 0px 0px 10px 5px;
 }
 
 .navigation{
@@ -121,10 +124,10 @@ header {
     background-color: #333;
     padding: 1rem;
     color: #fff;
-    position: fixed;
     z-index: 1;
-    margin-top: 15vh;
-    margin-right: 1rem;
+    margin-right: 0px;
+    margin-left: 0px;
+    transform: scale(1.2);
 }
 
 /* Navigation styles */
