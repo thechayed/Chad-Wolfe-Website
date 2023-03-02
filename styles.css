@@ -9,6 +9,8 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f7f7f7;
+    display: flex;
+    flex-direction: row;
 }
 
 /* Header styles */
@@ -21,10 +23,64 @@ header {
     color: #fff;
 }
 
+.sidebar{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    padding: 1rem;
+    color: #fff;
+    width: 20vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    min-width: 270px;
+}
+
+.main-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f7f7f7;
+    padding: 1rem;
+    color: #333;
+    height: 100vh;
+    z-index: 1;
+}
+
 /* Logo styles */
 .logo {
     font-size: 2rem;
     font-weight: bold;
+    height: fit-content;
+}
+
+.logoImg{
+    width: 75%; 
+    height: auto;
+    margin-left: 50%;
+    margin-bottom: 24px;
+    transform: translateX(-50%);
+    border-radius: 100%;
+}
+
+.navigation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    padding: 1rem;
+    color: #fff;
+    position: fixed;
+    z-index: 1;
+    margin-top: 15vh;
+    margin-right: 1rem;
 }
 
 /* Navigation styles */
